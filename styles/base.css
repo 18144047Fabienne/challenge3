@@ -1,0 +1,24 @@
+body {
+  background: #efefef;
+  margin: 0;
+}
+#map {
+  height: 100vh;
+  width: 100vw;
+}
+/* .mapboxgl-popup-close-button {
+  font-size: 16px;
+  color: #fff;
+}
+.mapboxgl-popup-content {
+  padding: 20px 25px 15px 20px;
+  color: #fff;
+  background-color: #175641;
+}
+.mapboxgl-popup-content h3 {
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+  border-top-color: #175641;
+} */
