@@ -17,10 +17,3 @@ map.addControl(
   })
 );
 
-// Voeg de planner toe
-map.addControl(
-  new MapboxDirections({
-    accessToken: mapboxgl.accessToken
-  }),
-  'top-left'
-);
