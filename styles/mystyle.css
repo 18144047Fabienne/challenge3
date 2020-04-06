@@ -14,3 +14,7 @@ body{
 .hidden {
 	display: none;
 }
+iframe {
+	width: 600px;
+	height: 400px;
+}
