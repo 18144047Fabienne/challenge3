@@ -1,16 +1,18 @@
 body {
-  background-image: url("background.svg");
-  background-size: cover;
+  background-color: red;
   margin: 0;
 }
+#body {
+  background-image: url('../images/astronaut.png');
+  background-size: cover;
+}
+
+
 #map {
-  height: 100vh;
+  height: 50vh;
   width: 100vw;
 }
-iframe {
-  width: 600px;
-  height: 400px;
-}
+
 /* .mapboxgl-popup-close-button {
   font-size: 16px;
   color: #fff;
