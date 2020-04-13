@@ -1,14 +1,48 @@
 body {
-  background-color: red;
+  font-family: sans-serif; 
+  background-color: #0E0E1F;
+  color: white;
+  display: grid;
   margin: 0;
+  padding: 0;
+  grid-template-rows: 100px 100px 1fr 1fr 100px;
+  grid-template-columns:  1fr;
+  grid-template-areas: 
+    "logo"
+    "nav"
+    "intro"
+    "map"
+    "footer";
+}
+nav {
+  grid-area: nav;
+  display: block;
+  margin: 30px;
+}
+nav ul {
+  padding: 0;
+  display: flex;
+  justify-content: left;
+}
+nav ul li{
+  list-style: none;
+  background-color: #A7A5CA;
+    margin: 0px 15px 0px 0px;
+  padding: 15px 30px 15px 30px;
+  border-radius: 25px;
+}
+.intro {
+  grid-area: intro;
+  height: 200px;
 }
 #body {
   background-image: url('../images/astronaut.png');
-  background-size: cover;
+  background-size: 300px 300px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-
-
 #map {
+  grid-area: map;
   height: 50vh;
   width: 100vw;
 }
