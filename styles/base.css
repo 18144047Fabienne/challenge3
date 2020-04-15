@@ -1,51 +1,172 @@
 body {
   font-family: sans-serif; 
-  background-color: #0E0E1F;
+  background-color: #fff;
   color: white;
   display: grid;
   margin: 0;
   padding: 0;
-  grid-template-rows: 100px 100px 1fr 1fr 100px;
+  grid-template-rows: 100px 1fr 1fr 1fr 100px;
   grid-template-columns:  1fr;
   grid-template-areas: 
     "logo"
-    "nav"
-    "intro"
+    "header"
+    "weatherapp"
     "map"
     "footer";
 }
-nav {
-  grid-area: nav;
-  display: block;
-  margin: 30px;
+
+.logo {
+  grid-area: logo;
 }
-nav ul {
-  padding: 0;
+.logo-style {
+  width: 200px;
+  height: 80px;
   display: flex;
-  justify-content: left;
+  justify-content: center;
 }
-nav ul li{
-  list-style: none;
-  background-color: #A7A5CA;
-    margin: 0px 15px 0px 0px;
-  padding: 15px 30px 15px 30px;
-  border-radius: 25px;
+.astronaut {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
 }
-.intro {
-  grid-area: intro;
-  height: 200px;
+.header {
+  grid-area: header;
+
 }
 #body {
-  background-image: url('../images/astronaut.png');
-  background-size: 300px 300px;
+  background-image: url('../images/background-mobile.png');
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 #map {
-  grid-area: map;
-  height: 50vh;
+  height: 100vh;
   width: 100vw;
+  margin: 10px;
 }
+.map {
+    grid-area: map;
+}
+
+article {
+  padding: 20px;
+  font-family: Arial;
+  font-size: 1.125em;
+  line-height: 28px;
+}
+.footer {
+  grid-area: footer;
+}
+
+/*aantal kilometers styling*/
+
+.distance-container {
+top: 10px;
+left: 10px;
+z-index: 1;
+}
+ 
+.distance-container > * {
+background-color: rgba(0, 0, 0, 0.5);
+color: #fff;
+font-size: 2em;
+line-height: 18px;
+display: block;
+margin: 0;
+padding: 5px 10px;
+border-radius: 3px;
+}
+/*end aantal kilometers*/
+/*het weer display*/
+
+.weatherapp{
+  grid-area: weatherapp;
+}
+.container{
+    width: 300px;    
+    background-color: transparent;
+    
+    display: block;
+    margin: 0 auto;
+    
+    border-radius: 10px;
+    padding-bottom : 50px;
+}
+
+.app-title{
+    width: 300px;
+    height: 50px;
+    border-radius: 10px 10px 0 0;
+}
+
+.app-title p{
+    font-family: 'Bree Serif', serif;
+    text-align: center;
+    padding: 15px;
+    margin: 0 auto;
+    font-size: 1.2em;
+    color: #000;
+}
+
+.notification{
+    background-color: #f8d7da;
+    display: none;
+}
+
+.notification p{
+    color: #000;
+    font-size: 1.2em;
+    margin: 0;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.weather-container{
+    width: 300px;
+    height: 260px;
+    background-color: transparent;
+}
+
+.weather-icon{
+    width: 300px;
+    height: 128px;
+}
+
+.weather-icon img{
+    display: block;
+    margin: 0 auto;
+}
+
+.temperature-value{
+    width: 300px;
+    height:60px;
+}
+
+.temperature-value p{
+    padding: 0;
+    margin: 0;
+    color: #000;
+    font-size: 4em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.temperature-value span{
+    color: #000;
+    font-size: 0.5em;
+}
+
+.temperature-description p{
+    padding: 8px;
+    margin: 0;
+    color: #000;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/*end het weer*/
+
 
 /* .mapboxgl-popup-close-button {
   font-size: 16px;
@@ -63,3 +184,48 @@ nav ul li{
 .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
   border-top-color: #175641;
 } */
+
+
+
+@media screen and (min-width: 600px){
+/*tablet*/
+
+  body {
+    display: grid;
+    grid-template-rows: 100px 1fr 1fr 100px;
+    grid-template-columns:  1fr 1fr;
+    grid-template-areas: 
+    "logo logo"
+    "header weatherapp"
+    "map map"
+    "footer footer";
+  }
+  .welkom {
+    width: 250px;
+  }
+  #map {
+  height: 80vh;
+  width: 100vw;
+  margin: 10px;
+  }
+  .astronaut {
+  width: 120%;
+  }
+
+
+}
+
+@media screen and (min-width: 900px){
+/*laptop*/
+  #body {
+  background-image: url('../images/background-desktop.png');
+  }
+  .astronaut {
+  width: 80%;
+  }
+}
+
+@media screen and (min-width: 1200px){
+/*laptop*/
+
+}

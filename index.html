@@ -3,56 +3,69 @@
 	<head>
 		<meta charset="utf-8">
 		<title>MapBox</title>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js"></script>
-    <script src="scripts/main.js" defer></script>
-    <link href="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css" rel="stylesheet" />
-    <link href="styles/base.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js"></script>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css" rel="stylesheet" />
+        <script src="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js"></script>
+        <script src="scripts/main.js" defer></script>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css" rel="stylesheet" />
+        <link href="styles/base.css" rel="stylesheet" />
+        <script src="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js"></script>
+        <script src="scripts/locations.js" defer></script>
+        <script src="scripts/main.js" defer></script>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css" rel="stylesheet" />
 
-    <!-- Geocoder assets -->
-    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
-    <link
-    rel="stylesheet"
-    href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css"
-    type="text/css"
-    />
-    <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
-    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
-     <!-- Directions assets -->
-    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.js"></script>
-    <link
-    rel="stylesheet"
-    href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.css"
-    type="text/css"
-    />
+        <!-- Geocoder assets -->
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
+        <link
+        rel="stylesheet"
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css"
+        type="text/css"
+        />
+        <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
+        <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+         <!-- Directions assets -->
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.js"></script>
+        <link
+        rel="stylesheet"
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.css"
+        type="text/css"/>
 	</head>
 	<body id="body">
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Restaurants</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section class="intro">
-                <div class="app-title"><p>Weather</p></div>
-                <div class="notification"></div>
-                <div class="weather-container">
-                    <div class="weather-icon"><img src="images/unknown.png"></div>
-                    <div class="temperature-value"><p>- &compfn;<span>C</span></p></div>
-                    <div class="temperature-description"><p> - </p></div>
-                    <div class="location"><p>-</p></div>
+        <section class="logo">
+            <figure><img src="images/logo.png" alt="logo" class="logo-style"></figure>
+        </section>
+        <section class="weatherapp">
+            <div class="container">
+            <div class="app-title">
+                <p>Het weer bij jou!</p>
+            </div>
+            <div class="notification"></div>
+            <div class="weather-container">
+                <div class="weather-icon">
+                    <img src="icons/unknown.png" alt="">
                 </div>
-            </section>
-            <section>
-               <div id="map"></div> 
-            </section>
-        </main>
-        <footer>
-            
+                <div class="temperature-value">
+                    <p>- &compfn;<span>C</span></p>
+                </div>
+                <div class="temperature-description">
+                    <p> - </p>
+                </div>
+                <div class="location"></div>
+            </div>
+        </div>
+        </section>
+        <section class="header">
+              <figure><img src="images/header3.png" alt="logo" class="astronaut"></figure>
+        </section>
+        <section class="map">
+            <div id="map"></div>
+            <div id="distance" class="distance-container"></div> 
+            <script src="https://npmcdn.com/@turf/turf@5.1.6/turf.min.js"></script>
+        </section>
+        <footer class="footer">
+            <article>the end</article>
         </footer>
-        
 	</body>
 </html>
