@@ -99,6 +99,8 @@ border-radius: 3px;
     width: 300px;
     height: 50px;
     border-radius: 10px 10px 0 0;
+    padding-bottom: 30px;
+    padding-top: 20px;
 }
 
 .app-title p{
@@ -108,6 +110,8 @@ border-radius: 3px;
     margin: 0 auto;
     font-size: 1.2em;
     color: #000;
+    background-color: white;
+    border-radius: 5px;
 }
 
 .notification{
@@ -132,13 +136,11 @@ border-radius: 3px;
 .weather-icon{
     width: 300px;
     height: 128px;
-    margin: 50px;
 }
 
 .weather-icon img{
     display: block;
     margin: 0 auto;
-    width: 200px;
 }
 
 .temperature-value{
@@ -170,25 +172,6 @@ border-radius: 3px;
 }
 
 /*end het weer*/
-
-
-.mapboxgl-popup-close-button {
-  font-size: 16px;
-  color: #fff;
-}
-.mapboxgl-popup-content {
-  padding: 20px 25px 15px 20px;
-  color: #fff;
-  background-color: #175641;
-}
-.mapboxgl-popup-content h3 {
-  margin-top: 0;
-  margin-bottom: 4px;
-}
-.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
-  border-top-color: #175641;
-} 
-
 
 
 @media screen and (min-width: 600px){
