@@ -173,6 +173,31 @@ border-radius: 3px;
 
 /*end het weer*/
 
+/*buttons*/
+
+#myBtn {
+  display: none; 
+  position: fixed; 
+  bottom: 10px; 
+  right: 15px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: #A7A5CA; 
+  color: white; 
+  padding: 15px; 
+  border-radius: 5px; 
+  font-size: 18px; 
+}
+
+#myBtn:hover {
+  background-color: #00F8FF;
+  cursor: pointer;
+}
+
+
+/*eind buttons*/
+
 
 @media screen and (min-width: 600px){
 /*tablet*/

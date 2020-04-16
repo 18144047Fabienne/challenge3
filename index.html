@@ -31,6 +31,24 @@
         rel="stylesheet"
         href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.css"
         type="text/css"/>
+        <script>
+            //button//
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+              } else {
+                document.getElementById("myBtn").style.display = "none";
+              }
+            }
+
+            // back tot op button; scrollt terug naar header
+            function topFunction() {
+              document.body.scrollTop = 0; 
+              document.documentElement.scrollTop = 0; 
+            }
+        </script>
 	</head>
 	<body id="body">
         <section class="logo">
@@ -64,6 +82,7 @@
             <div id="distance" class="distance-container"></div> 
             <script src="https://npmcdn.com/@turf/turf@5.1.6/turf.min.js"></script>
         </section>
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
         <footer class="footer">
             <article>the end</article>
         </footer>
