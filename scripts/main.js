@@ -5,9 +5,9 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiZmFiaWVubmUxODE0NDA0NyIsImEiOiJjazhrNHpodWwwM
 // Initialate map
 var map = new mapboxgl.Map({
   container: 'map',
-  style: 'mapbox://styles/mapbox/streets-v11',
-  center: [4.3555598, 52.0066719],
-  zoom: 13
+  style: 'mapbox://styles/mapbox/outdoors-v11',
+  center: [4.35885, 52.01172],
+  zoom: 12
 });
 
 
@@ -20,14 +20,11 @@ map.addControl(
 );
 
 //tutorial
-// Tutorial by http://youtube.com/CodeExplained
-// api key : 82005d27a116c2880c8f0fcb866998a0
 
 //select elements
 const iconElement = document.querySelector(".weather-icon");
 const tempElement = document.querySelector(".temperature-value p");
 const descElement = document.querySelector(".temperature-description p");
-const locationElement = document.querySelector(".location p");
 const notificationElement = document.querySelector(".notification");
 
 // app data
@@ -90,7 +87,6 @@ function displayWeather(){
   iconElement.innerHTML = `<img src="icons/${weather.iconId}.png"/>`;
   tempElement.innerHTML = `${weather.temperature.value}&compfn;<span>C</span>`;
   descElement.innerHTML = weather.description;
-  locationElement.innerHTML = `${weather.city}, ${weather.country}`;
 }
 //aantal kilometer
  

@@ -24,7 +24,7 @@ body {
   display: flex;
   justify-content: center;
 }
-.astronaut {
+.stappenplan {
   display: flex;
   justify-content: center;
   width: 90%;
@@ -32,6 +32,7 @@ body {
 }
 .header {
   grid-area: header;
+  height: 50vh;
 
 }
 #body {
@@ -84,7 +85,7 @@ border-radius: 3px;
   grid-area: weatherapp;
 }
 .container{
-    width: 300px;    
+    width: 400px;    
     background-color: transparent;
     
     display: block;
@@ -116,7 +117,7 @@ border-radius: 3px;
 
 .notification p{
     color: #000;
-    font-size: 1.2em;
+    font-size: 1.6em;
     margin: 0;
     text-align: center;
     padding: 10px 0;
@@ -124,18 +125,20 @@ border-radius: 3px;
 
 .weather-container{
     width: 300px;
-    height: 260px;
+    height: 160px;
     background-color: transparent;
 }
 
 .weather-icon{
     width: 300px;
     height: 128px;
+    margin: 50px;
 }
 
 .weather-icon img{
     display: block;
     margin: 0 auto;
+    width: 200px;
 }
 
 .temperature-value{
@@ -158,7 +161,8 @@ border-radius: 3px;
 }
 
 .temperature-description p{
-    padding: 8px;
+    font-family: 'Arial Bold', sans-serif;
+    padding: 20px;
     margin: 0;
     color: #000;
     text-align: center;
@@ -168,7 +172,7 @@ border-radius: 3px;
 /*end het weer*/
 
 
-/* .mapboxgl-popup-close-button {
+.mapboxgl-popup-close-button {
   font-size: 16px;
   color: #fff;
 }
@@ -183,13 +187,29 @@ border-radius: 3px;
 }
 .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
   border-top-color: #175641;
-} */
+} 
 
 
 
 @media screen and (min-width: 600px){
 /*tablet*/
 
+  .welkom {
+    width: 250px;
+  }
+  #map {
+  height: 80vh;
+  width: 90vw;
+  margin: 0 auto;
+  }
+  .stappenplan {
+  width: 68%;
+  }
+
+}
+
+@media screen and (min-width: 900px){
+/*laptop*/
   body {
     display: grid;
     grid-template-rows: 100px 1fr 1fr 100px;
@@ -200,32 +220,17 @@ border-radius: 3px;
     "map map"
     "footer footer";
   }
-  .welkom {
-    width: 250px;
-  }
-  #map {
-  height: 80vh;
-  width: 100vw;
-  margin: 10px;
-  }
-  .astronaut {
-  width: 120%;
-  }
-
-
-}
-
-@media screen and (min-width: 900px){
-/*laptop*/
   #body {
   background-image: url('../images/background-desktop.png');
   }
-  .astronaut {
-  width: 80%;
+  .stappenplan {
+  width: 90%;
   }
 }
 
 @media screen and (min-width: 1200px){
 /*laptop*/
-
+  .stappenplan {
+  width: 80%;
+  }
 }
